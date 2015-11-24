@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   end
 
   resources :teachers
+  get 'subjects' => 'reports#subjects'
+  resources :visitors
   
   devise_for :users
 end
