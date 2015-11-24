@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   end
 
   resources :teachers
-  get 'subjects' => 'reports#subjects'
+  get 'subjects' => 'reports#subjects', as: 'report_subjects'
   resources :visitors
   
   devise_for :users
+
+  root to: 'students#index'
 end
