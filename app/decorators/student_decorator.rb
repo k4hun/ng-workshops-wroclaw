@@ -4,5 +4,10 @@ class StudentDecorator < BaseDecorator
   end
 
   def avg_notes(subject_item)
+    sum = subject_item.subject_item_notes.sum(:value).to_f
+    count = subject_item.subject_item_notes.count.to_f
+    count > 0 ? (result = (sum/count)) : (result = count)
+
+    return sprintf('%.2f', result)
   end
 end
