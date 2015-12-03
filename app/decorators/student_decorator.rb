@@ -10,4 +10,8 @@ class StudentDecorator < BaseDecorator
 
     return sprintf('%.2f', result)
   end
+
+  def format_birthdate
+  	birthdate.strftime('%Y-%m-%d') if birthdate.present?
+  end
 end
