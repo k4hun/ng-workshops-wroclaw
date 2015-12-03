@@ -8,7 +8,9 @@ Bundler.require(*Rails.groups)
 
 module RorWorkshops
   class Application < Rails::Application
-
+    
+    ENV['APP_NAME'] = 'School Diary Application'
+    
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
