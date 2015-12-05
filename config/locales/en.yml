@@ -4,6 +4,7 @@ en:
     teachers: Teachers
     reports: Reports
     reports_subjects: Subjects
+    payments: Payments
     logout: Logout
     signin: Sign in
     signup: Sign up
@@ -19,6 +20,7 @@ en:
     back: Back
     add_new_item: Add new one
     subjects: subjects
+    payments: payments
   student:
     columns:
       first_name: first name
@@ -33,3 +35,7 @@ en:
     columns:
       full_name: Full name
       avg_notes: Notes avarange
+  payments:
+    columns:
+      student: Student
+      last_payment: Last payment

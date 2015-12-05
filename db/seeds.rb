@@ -25,4 +25,12 @@ end
   )
 end
 
+students = Student.all
+50.times do
+  Payment.create!(
+    created_at: Faker::Date.between(1.year.ago, Date.today),
+    student: students.sample
+  )
+end
+
 puts "Seeds: done"

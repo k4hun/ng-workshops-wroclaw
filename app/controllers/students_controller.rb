@@ -2,6 +2,7 @@ class StudentsController < ApplicationController
   expose(:students)
   expose(:student, attributes: :student_params)
   expose(:student_subject_items) { student.subject_items }
+  expose(:student_payments) { student.payments }
 
   before_action :authenticate_user!
 
