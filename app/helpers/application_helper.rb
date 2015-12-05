@@ -4,6 +4,6 @@ module ApplicationHelper
   end
 
   def subject_items
-    SubjectItem.where(teacher_id: nil)
+    SubjectItem.all
   end
 end
