@@ -1,0 +1,5 @@
+= simple_form_for payment do |f|
+  = f.input :created_at
+  = f.association :student, label_method: lambda { |student| "#{student.first_name} #{student.last_name}" }, value_method: :id, label: 'Student', as: :select
+  = link_to t('shared.back'), students_path, class: 'btn btn-default'
+  = f.button :submit

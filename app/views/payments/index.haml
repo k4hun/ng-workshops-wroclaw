@@ -1,0 +1,11 @@
+- breadcrumb :payments
+= link_to t('shared.add_new_item'), new_payment_path, class: 'btn btn-default'
+%table.table.table-condensed.payments
+  %thead
+    %tr
+      %th= t('payments.columns.first_name')
+      %th= t('payments.columns.last_name')
+      %th= t('payments.columns.last_payment')
+      %th= t('shared.show')
+  %tbody
+    = render payments
